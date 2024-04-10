@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #333;
+    background-color: #F5F5DC;
+    line-height: 1.6;
+}
+
+/* Structure */
+header {
+    background-color: #600;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+    max-width: 1200px;
+    overflow: auto;
+}
+
+section {
+    padding: 2rem 0;
+}
+
+/* Gallery */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.Helmet {
+    flex: 0 1 calc(33.333% - 2rem);
+    margin: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: white;
+    text-align: center;
+    transition: transform 0.5s ease; /* Ajout de la transition */
+}
+
+.Helmet img {
+    width: 100%;
+    display: block;
+}
+
+.Helmet h3 {
+    padding: 0.5rem;
+    background-color: #f1f1f1;
+    margin: 0;
+}
+
+.Helmet p {
+    padding: 0.5rem;
+}
+
+.Helmet:hover {
+    transform: rotate(5deg); /* Ajout de la rotation au survol */
+}
+
+/* Contact section */
+.contact-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 0.7rem;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
+
+@media only screen and (max-width: 768px) {
+    .gallery {
+        flex-direction: column;
+    }
+
+    .shoe-item {
+        flex: 0 1 100%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+}
